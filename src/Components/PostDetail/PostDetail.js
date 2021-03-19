@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import Comment from './Components/Comment/Comment'
-
+import Commnet from './../Comment/Comment';
 const PostDetail = () => {
     const {id} = useParams();
     const [post, setPost] = useState({});
@@ -27,7 +26,7 @@ const PostDetail = () => {
             <h5>Body: {post.body}</h5>
             <p>Commnet: {comments.length} </p>
             {
-                comments.map(comment => <Comment key={comment.id} comment={comment}></Comment>)
+                comments.map(comment => <Commnet key={comment.id} comment={comment}></Commnet>)
             }
         </div>
     );
